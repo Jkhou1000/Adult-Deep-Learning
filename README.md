@@ -73,7 +73,7 @@ Further improvements are definitely needed, training it on less data to avoid ov
 ## Citations and Contact
 This data was of course obtained from the UCI Machine Learning respoitory
 
-*Ronny Kohavi and Barry Becker
+* Ronny Kohavi and Barry Becker
 Data Mining and Visualization
 Silicon Graphics.
 e-mail: ronnyk '@' live.com for questions.
