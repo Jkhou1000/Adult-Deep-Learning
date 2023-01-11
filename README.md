@@ -18,14 +18,40 @@ This project uses [data provided by the UCI](https://archive.ics.uci.edu/ml/data
 13. capital-loss: continuous.
 14. hours-per-week: continuous.
 15. native-country: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands.
+
+## Data Viz
+ ![830df649-ca47-4a49-ada4-68d4882bf677](https://user-images.githubusercontent.com/105755535/211839375-93cf4f0c-2129-45dd-a49e-0d6ecec44a86.png)
+ This Boxen plot details the age most people are seperated by income and gender. A large chunk of people both male and female that earn under 50k are from an age range of around 27-45, women skewing a little younger with their first quartile at around 25. Barring a couple of outliers, the maximum age for men taking this census do not go over age 85 while for women it maxes out around 73(not including the outliers of course).
  
+![9b887363-2ca4-44e6-8d26-5261ef3ddb64](https://user-images.githubusercontent.com/105755535/211839422-003ddb7c-41e0-4caf-b2a7-b4678a93955c.png)
+Income based on education gives us a look into how many people have had a education and the income they earn. note that this is a vague correlation and does not necessarily tie into whatever job they may have, as notably a lot of people who have completed college still have lower incomes, outweighing those who do earn >50k. The only educations where more people earn >50k are those who have done prof-school, a masters degree, or have a doctorate. The majority of the people have at least finished Highschool, and of course earn <=50k, on the other end of the spectrum, an extreme minority have only preschool education and only earn <=50k. 
+
+
 ## Metrics
-As a classification task, this Neural Network was tuned for accuracy, the overall performance of which is summed up by the f1-score. I ran through 3 models, and the final one was the best one of the 3, earning a modest .70 (about 70% of the data is predicted correctly). The training and testing loss showed signs of overfitting, which I was able to alleviate somewhat through the final model. The changes were small however, and ultimately much more can be done to improve it further:
+As a classification task, this Neural Network was tuned for accuracy, the overall performance of which is summed up by the f1-score. 3 models were made, and the final one was the best one of the 3, earning a modest .70 (about 70% of the data is predicted correctly). The training and testing loss showed signs of overfitting, which I was able to alleviate somewhat through the final model. The changes were small however, and ultimately much more can be done to improve it further.
+
 ### Model Loss & Accuracy
 ![Model Loss](https://user-images.githubusercontent.com/105755535/211419795-4cc203ce-ed36-42b5-9cbd-adc4d4027025.png)
 ![Model Accuracy](https://user-images.githubusercontent.com/105755535/211419833-1519622a-bc4f-4fa4-94df-836e5d8074fe.png)
-The loss does slightly decrease over time for testing but the accuracy still fluctuates.
-## Confusion Matrices
+
+The loss does slightly decrease over time for testing but the accuracy still fluctuates in the testing. The training data is fine of course but it is preferable that it performs well on testing, or both of course.
+
+### Confusion Matrices
 ![Training adult](https://user-images.githubusercontent.com/105755535/211420765-ad3dcd15-e327-4a4e-94b1-0f14205445c2.png)
 ![Testing Adult](https://user-images.githubusercontent.com/105755535/211420792-1347c419-e7d4-47bd-91b0-d2207ef237b4.png)
-The one thing the training and testing predictions had in common were the performances on the true positives, namely its ability to predict people who earn over 50k. This may be due in part
+
+The one thing the training and testing predictions had in common were the performances on the true positives, namely its ability to predict people who earn over 50k. This may be due to the fact that there are less people who earn over 50k, which means there is less data for it to train on, as well as the fact that there aren't that many common trends in the data for earners over 50k.
+
+### Next Steps
+Further improvements are definitely needed, training it on less data to avoid overfitting, tinkering with Dropout and regularization more. Using different types of layers may also yield more substantial changes as well. 
+
+## Citations and Contact
+This data was of course obtained from the UCI Machine Learning respoitory
+
+Ronny Kohavi and Barry Becker
+Data Mining and Visualization
+Silicon Graphics.
+e-mail: ronnyk '@' live.com for questions.
+
+If you have any questions please contact me at Jkhoury10000@gmail.com
+
