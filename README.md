@@ -41,7 +41,8 @@ The loss does slightly decrease over time for testing but the accuracy still flu
 ### Confusion Matrices
 ![Training adult](https://user-images.githubusercontent.com/105755535/211420765-ad3dcd15-e327-4a4e-94b1-0f14205445c2.png)
 
-Training Evaluation:
+   
+    Training Evaluation:
 
               precision    recall  f1-score   support
 
@@ -54,7 +55,7 @@ Training Evaluation:
 
 ![Testing Adult](https://user-images.githubusercontent.com/105755535/211420792-1347c419-e7d4-47bd-91b0-d2207ef237b4.png)
 
-Testing Evaluation:
+    Testing Evaluation:
 
               precision    recall  f1-score   support
 
